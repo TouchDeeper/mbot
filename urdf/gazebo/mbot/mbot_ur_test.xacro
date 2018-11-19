@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<robot name="mbot" xmlns:xacro="http://ros.org/wiki/xacro">
+<!--    <xacro:include filename="$(find ridgeback_description_mbot)/urdf/gazebo/ridgeback_gazebo.xacro" />-->
+    <!-- ridgeback -->
+    <!--<ridgeback/>-->
+    <xacro:include filename="$(find ridgeback_ur_description)/urdf/ridgeback_dual_ur5_description.urdf.xacro" />
+</robot>
