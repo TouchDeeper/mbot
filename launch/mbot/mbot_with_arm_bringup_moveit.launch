@@ -1,0 +1,14 @@
+<launch>
+  
+    <!-- Launch Gazebo ur_gazebo_controller -->
+    <include file="$(find ridgeback_description_mbot)/launch/ridgeback/ridgeback_world.launch" />
+
+    <!-- ros_control arm launch file -->
+    <include file="$(find ridgeback_description_mbot)/launch/ur5/gazebo/arm_gazebo_states.launch" />   
+    <!-- ros_control trajectory control dof arm launch file -->
+    <include file="$(find ridgeback_description_mbot)/launch/ur5/arm_trajectory_controller.launch" />
+
+    <!-- moveit launch file -->
+    <include file="$(find ridgeback_ur_test)/launch/ridgeback_ur_moveit_planning_execution.launch" />
+
+</launch>
