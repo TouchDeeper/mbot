@@ -2,11 +2,11 @@
 <robot>
   <gazebo>
     <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-      <robotNamespace>/mbot</robotNamespace>
+      <robotNamespace>/arm</robotNamespace>
     </plugin>
 
     <plugin name="ridgeback_ros_force_based_move" filename="libridgeback_ros_force_based_move.so">
-      <robotNamespace>/ridgeback</robotNamespace>
+      <robotNamespace>/</robotNamespace>
       <commandTopic>cmd_vel</commandTopic>
       <odometryTopic>odom</odometryTopic>
       <odometryFrame>odom</odometryFrame>
@@ -14,14 +14,14 @@
       <robotBaseFrame>base_link</robotBaseFrame>
       <cmdVelTimeOut>0.25</cmdVelTimeOut>
       <!-- Don't publish a transform: the controller does it. -->
-      <publishOdometryTf>0</publishOdometryTf>
+      <publishOdometryTf>1</publishOdometryTf>
       <yaw_velocity_p_gain>500.0</yaw_velocity_p_gain>
       <x_velocity_p_gain>10000.0</x_velocity_p_gain>
       <y_velocity_p_gain>10000.0</y_velocity_p_gain>
     </plugin>
 
     <plugin name="imu_controller" filename="libhector_gazebo_ros_imu.so">
-      <robotNamespace>/ridgeback</robotNamespace>
+      <robotNamespace>/</robotNamespace>
       <updateRate>50.0</updateRate>
       <bodyName>imu_link</bodyName>
       <topicName>imu/data</topicName>
@@ -35,7 +35,7 @@
 
     <plugin name="gazebo_ros_joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
       <jointName>front_rocker</jointName>
-      <robotNamespace>/ridgeback</robotNamespace>
+      <robotNamespace>/</robotNamespace>
       <updateRate>50.0</updateRate>
     </plugin>
   </gazebo>
