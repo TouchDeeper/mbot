@@ -5,7 +5,7 @@
          command="$(find ridgeback_description)/scripts/env_run
                   $(find ridgeback_description)/urdf/configs/$(arg config)
                   $(find xacro)/xacro $(find ridgeback_description_mbot)/urdf/gazebo/mbot/mbot_gazebo.xacro" />
-  <param name="use_gui" value="true"/>
+  <param name="use_gui" value="false"/>
   <!-- 运行joint_state_publisher节点，发布机器人的关节状态  -->
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
   <!-- 运行robot_state_publisher节点，发布tf  -->
