@@ -13,7 +13,7 @@
     <origin xyz="$(optenv RIDGEBACK_RIGHT_UR_XYZ 0.21 -0.20 0.0)" rpy="$(optenv RIDGEBACK_RIGHT_UR_RPY 0 0 0)"/>
   </joint>
 
-  <xacro:include filename="$(find ur_description)/urdf/ur5.urdf.xacro" />
+  <xacro:include filename="$(find ridgeback_description_mbot)/urdf/ur5/ur5.urdf.xacro" />
   <!-- common stuff -->
   <xacro:include filename="$(find ridgeback_description_mbot)/urdf/ur5/common.gazebo.xacro" />
 
