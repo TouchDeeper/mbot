@@ -22,12 +22,12 @@
   <include file="$(find ridgeback_description_mbot)/launch/ridgeback/description.launch">
     <arg name="config" value="$(arg config)" />
   </include>
-  <!--include file="$(find ridgeback_description_mbot)/launch/ridgeback/control.launch" /-->
+  <include file="$(find ridgeback_description_mbot)/launch/ridgeback/control.launch" />
   <!--include file="$(find ridgeback_control)/launch/teleop.launch">
     <arg name="joystick" value="false"/>
   </include-->
 
-  <!--rosparam param="/gazebo_ros_control/pid_gains">
+  <rosparam param="/gazebo_ros_control/pid_gains">
     front_left_wheel:
       p: 1
       i: 0.1
@@ -44,7 +44,7 @@
       p: 1
       i: 0.1
       d: 0
-  </rosparam-->
+  </rosparam>
 
   <!-- Spawn Ridgeback -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
