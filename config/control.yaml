@@ -3,9 +3,6 @@
 #  type: "joint_state_controller/JointStateController"
 #  publish_rate: 50
 
-#  ridgeback_joint_publisher:
-#    type: "joint_state_controller/JointStateController"
-#    publish_rate: 50
 ridgeback_velocity_controller:
   type: "mecanum_drive_controller/MecanumDriveController"
   front_left_wheel_joint: "front_left_wheel"
